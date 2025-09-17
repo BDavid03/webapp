@@ -1,0 +1,120 @@
+.world-map {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.35);
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.world-map svg {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.world-map__ocean {
+  fill: #0f172a;
+}
+
+.world-map__country {
+  fill: #1f2937;
+  stroke: rgba(148, 163, 184, 0.35);
+  stroke-width: 0.6;
+}
+
+.world-map__daylight {
+  fill: url(#world-map-sunlight);
+  mix-blend-mode: screen;
+}
+
+.world-map__terminator {
+  fill: none;
+  stroke: rgba(248, 250, 252, 0.8);
+  stroke-width: 1.2;
+  stroke-dasharray: 6 6;
+}
+
+.world-map__equator {
+  fill: none;
+  stroke: rgba(248, 250, 252, 0.6);
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+  pointer-events: none;
+}
+
+.world-map__city {
+  cursor: pointer;
+}
+
+.world-map__city:focus-visible {
+  outline: none;
+}
+
+.world-map__temp {
+  font-size: 11px;
+  font-weight: 600;
+  fill: #f8fafc;
+  text-shadow: 0 0 3px rgba(15, 23, 42, 0.8);
+  pointer-events: none;
+}
+
+.world-map__label {
+  font-size: 10px;
+  fill: #cbd5f5;
+  text-shadow: 0 0 2px rgba(15, 23, 42, 0.9);
+  pointer-events: none;
+}
+
+.world-map__timestamp {
+  font-size: 12px;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.world-map__footer {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.world-map__details {
+  width: 100%;
+  pointer-events: auto;
+}
+
+.world-map--loading {
+  min-height: 280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 18px;
+}
+
+.world-map__loading {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+@media (max-width: 900px) {
+  .world-map {
+    padding: 12px;
+  }
+}

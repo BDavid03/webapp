@@ -1,0 +1,22 @@
+/* Weekly Timetable (editable via src/data/timetable.js) */
+.wt { --hour-height: 48px; --border: #e8e8e8; --grid: #f6f6f6; --header-bg: #fbfbfb; }
+.wt { border: 1px solid var(--border); border-radius: 10px; background: #fff; overflow: hidden; }
+.wt__header { display: grid; grid-template-columns: 80px repeat(7, 1fr); background: var(--header-bg); border-bottom: 1px solid var(--border); }
+.wt__headcell { padding: 8px; font-weight: 600; font-size: 14px; text-align: center; }
+.wt__grid { display: grid; grid-template-columns: 80px repeat(7, 1fr); position: relative; }
+.wt__times { display: grid; grid-template-rows: repeat(var(--rows), var(--hour-height)); }
+.wt__time { border-bottom: 1px dashed var(--grid); font-size: 12px; color: #666; display: flex; align-items: flex-start; justify-content: flex-end; padding: 4px 6px; box-sizing: border-box; }
+.wt__time:last-child { border-bottom: none; }
+.wt__cols { display: contents; }
+.wt__col { position: relative; display: grid; grid-template-rows: repeat(var(--rows), var(--hour-height)); }
+.wt__slot { border-bottom: 1px dashed var(--grid); box-sizing: border-box; }
+.wt__slot:last-child { border-bottom: none; }
+.wt__slot--interactive { cursor: pointer; }
+.wt__slot--interactive:hover { background: rgba(25, 118, 210, 0.06); }
+.wt__event { position: absolute; left: 6px; right: 6px; border-radius: 8px; padding: 6px 8px; color: #fff; font-size: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); overflow: hidden; cursor: pointer; }
+.wt__event-title { font-weight: 700; }
+.wt__event-loc { opacity: 0.9; }
+@media (max-width: 900px) {
+  .wt { --hour-height: 42px; }
+  .wt__headcell { font-size: 13px; }
+}

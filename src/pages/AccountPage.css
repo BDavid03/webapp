@@ -1,0 +1,51 @@
+.account {
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.account__form {
+  display: grid;
+  gap: 12px;
+  max-width: 520px;
+}
+
+.account__row {
+  display: grid;
+  gap: 6px;
+}
+
+.account__row input[type="text"] {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.account__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.account__actions button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.account__actions button:hover {
+  background: #f7f7f7;
+}
+
+.account__avatar-preview img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.account__message { font-size: 13px; }
+.account__message--ok { color: #2e7d32; }
+.account__message--err { color: #c62828; }

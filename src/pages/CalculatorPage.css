@@ -1,0 +1,23 @@
+/* Desmos-style calculator layout */
+.gc { display: grid; grid-template-columns: minmax(260px, 380px) 1fr; gap: 16px; padding: 16px; }
+.gc__left { display: grid; gap: 12px; align-content: start; }
+.gc__title { margin: 0; font-size: 1.1rem; font-weight: 700; }
+.gc__add { display: inline-flex; align-items: center; gap: 6px; }
+.gc__btn { padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; background: #fff; cursor: pointer; }
+.gc__btn:hover { background: #fafafa; }
+.gc__expr { display: grid; grid-template-columns: 8px 1fr auto; gap: 8px; align-items: start; padding: 8px; border: 1px solid #e7e7e7; border-radius: 10px; background: #fff; }
+.gc__color { width: 8px; height: 100%; border-radius: 6px; background: var(--color, #1976d2); }
+.gc__input { width: 100%; font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; border: 1px solid #ddd; border-radius: 8px; padding: 8px 10px; }
+.gc__meta { display: grid; gap: 4px; justify-items: end; }
+.gc__row { display: flex; gap: 6px; align-items: center; }
+.gc__checkbox { margin-right: 6px; }
+.gc__result { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: #333; }
+.gc__right { border: 1px solid #e7e7e7; border-radius: 10px; padding: 8px; background: #fff; min-height: 280px; }
+.gc__toolbar { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.gc__split { display: flex; gap: 6px; }
+.gc__small { font-size: 12px; color: #555; }
+
+@media (max-width: 860px) {
+  .gc { grid-template-columns: 1fr; }
+}
+

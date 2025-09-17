@@ -1,0 +1,16 @@
+ .expression {
+  min-height: 24px;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 0 10px;
+  color: #6b7280; /* gray-500 */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
